@@ -14,7 +14,10 @@ defmodule EctoExperiments.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :ecto, :postgrex]]
+    [
+      applications: [:logger, :ecto, :postgrex],
+      mod: { EctoExperiments, [] }
+    ]
   end
 
   # Dependencies can be Hex packages:
