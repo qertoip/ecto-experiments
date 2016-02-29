@@ -1,7 +1,8 @@
 use Mix.Config
 
-# Print only warnings and errors during test
-config :logger, level: :all
+# Configures Elixir's Logger
+config :logger, :console,
+  format: "$time $metadata[$level] $message\n"
 
 config :ecto_experiments, EctoExperiments.Repo,
   adapter: Ecto.Adapters.Postgres,
